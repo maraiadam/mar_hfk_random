@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(ros2_cpp_template)
+project(collision_alert_pkg)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
@@ -12,23 +12,29 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(geometry_msgs REQUIRED)
 
 set(ament_dependencies
   rclcpp
+  sensor_msgs
   std_msgs
-  geometry_msgs
 )
 
-# add_executable(simple_sub_node src/print_pose.cpp)
-# ament_target_dependencies(simple_sub_node ${ament_dependencies} )
+add_executable(distance_sensor_node src/distance_sensor_node.cpp)
+ament_target_dependencies(distance_sensor_node ${ament_dependencies} )
+add_executable(collision_alert_node src/collision_alert_node.cpp)
+ament_target_dependencies(collision_alert_node ${ament_dependencies} )
 
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME})
 
 install(TARGETS
-# simple_sub_node
-DESTINATION lib/${PROJECT_NAME})
+  distance_sensor_node
+  collision_alert_node
+  DESTINATION lib/${PROJECT_NAME})
 
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}/)
+  
 ament_package()
