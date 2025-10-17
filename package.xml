@@ -3,14 +3,14 @@
 <package format="3">
   <name>ros2_cpp_template</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="todo@todo.com">TODO:</maintainer>
+  <description>ROS2 csomag, amely egy távolságérzékelőt és egy ütközésjelző rendszert szimulál.</description>
+  <maintainer email="marai.adam@hallgato.sze.hu">Marai Adam</maintainer>
   <license>GNU General Public License v3.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
   <depend>std_msgs</depend>
-  <depend>geometry_msgs</depend>
   <exec_depend>ros2launch</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
