@@ -27,7 +27,7 @@ add_executable(collision_alert_node src/collision_alert_node.cpp)
 ament_target_dependencies(collision_alert_node ${ament_dependencies} )
 
 install(DIRECTORY launch
-  DESTINATION share/${PROJECT_NAME})
+  DESTINATION share/${collision_alert_pkg})
 
 install(TARGETS
   distance_sensor_node
