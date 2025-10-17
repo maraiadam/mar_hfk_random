@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(collision_alert_pkg)
+project(mar_hfk_random)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
