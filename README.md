@@ -26,6 +26,12 @@ colcon build --packages-select ros2_cpp_template --symlink-install
 ``` bash
 source ~/ros2_ws/install/setup.bash
 ```
+cd ~/ros2_ws/src
+git clone https://github.com/maraiadam/mar_hfk_random/collision_alert_pkg.git
+cd ~/ros2_ws
+colcon build
+source install/setup.bash
+ros2 launch collision_alert_pkg collision_system.launch.py
 </details>
 
 ``` r
