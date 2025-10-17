@@ -32,7 +32,6 @@ install(DIRECTORY launch
 install(TARGETS
   distance_sensor_node
   collision_alert_node
-  DESTINATION lib/${collision_alert_pkg})
+  DESTINATION lib/${PROJECT_NAME})
 
-  
 ament_package()
