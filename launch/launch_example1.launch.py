@@ -4,31 +4,13 @@ from launch_ros.actions import Node
 def generate_launch_description():
     return LaunchDescription([
         Node(
-            package='turtlesim',
-            namespace='turtlesim1',
-            executable='turtlesim_node',
-            name='sim'
+            package='collision_alert_pkg',
+            executable='distance_sensor_node',
+            name='distance_sensor'
         ),
         Node(
-            package='turtlesim',
-            namespace='turtlesim2',
-            executable='turtlesim_node',
-            name='sim'
-        ),
-        Node(
-            package='turtlesim',
-            executable='mimic',
-            name='mimic',
-            remappings=[
-                ('/input/pose', '/turtlesim1/turtle1/pose'),
-                ('/output/cmd_vel', '/turtlesim2/turtle1/cmd_vel'),
-            ]
-        ),
-        # Node(
-        #     package='ros2_cpp_template',
-        #     executable='simple_sub_node',
-        #     output='screen',
-        # ),
-
-        # first comment
+            package='collision_alert_pkg',
+            executable='collision_alert_node',
+            name='collision_alert'
+        )
     ])
