@@ -29,5 +29,5 @@ source ~/ros2_ws/install/setup.bash
 </details>
 
 ``` r
-ros2 launch ros2_cpp_template launch_example1.launch.py
+ros2 launch collision_alert_pkg collision_system.launch.py
 ```
