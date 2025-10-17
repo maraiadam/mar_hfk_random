@@ -1,4 +1,4 @@
-# `ros2_cpp_template` package
+# `mar_hfk_random` package
 ROS 2 C++ package.  [![Static Badge](https://img.shields.io/badge/ROS_2-Humble-34aec5)](https://docs.ros.org/en/humble/)
 ## Packages and build
 
@@ -17,7 +17,7 @@ git clone https://github.com/maraiadam/mar_hfk_random
 cd ~/ros2_ws
 ```
 ``` r
-colcon build --packages-select ros2_cpp_template --symlink-install
+colcon build --packages-select mar_hfk_random --symlink-install
 ```
 
 <details>
@@ -26,14 +26,9 @@ colcon build --packages-select ros2_cpp_template --symlink-install
 ``` bash
 source ~/ros2_ws/install/setup.bash
 ```
-cd ~/ros2_ws/src
-git clone https://github.com/maraiadam/mar_hfk_random/collision_alert_pkg.git
-cd ~/ros2_ws
-colcon build
-source install/setup.bash
-ros2 launch collision_alert_pkg collision_system.launch.py
+
 </details>
 
 ``` r
-ros2 launch collision_alert_pkg collision_system.launch.py
+ros2 launch mar_hfk_random collision_system.launch.py
 ```
